@@ -64,5 +64,10 @@ P.copyright {font-size: 75%}
 
 .bodyText {
 	font-family: Arial, Verdana, Geneva, sans-serif;
-	FONT-SIZE: 10pt
+	FONT-SIZE: 10pt;
+	padding: 15px;
+}
+
+.addMat {
+	padding: 0px 15px 15px;
 }
