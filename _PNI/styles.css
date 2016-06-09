@@ -1,0 +1,68 @@
+BODY {background-color: rgb(255,204,102)}
+
+p {
+	color: #333333;
+	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	FONT-SIZE: 10pt
+}
+
+h2 {
+	color: #3F0080;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h3 {
+	color: #3F0080;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+li {
+	font-family: Arial, Verdana, Geneva, sans-serif;
+	FONT-SIZE: 10pt
+}
+
+td {
+	font-family: Arial, Verdana, Geneva, sans-serif;
+	FONT-SIZE: 10pt
+}
+
+A:link {
+	COLOR: #990000; TEXT-DECORATION: none;
+}
+
+A:visited {
+	COLOR: #990000; TEXT-DECORATION: none
+}
+
+A:hover {
+	COLOR: #3F0080; TEXT-DECORATION: underline
+}
+
+A:active {
+	COLOR: #990000; TEXT-DECORATION: none
+}
+
+.notice {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+P.copyright {font-size: 75%}
+
+.header {
+	color: #444444;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+.bodyText {
+	font-family: Arial, Verdana, Geneva, sans-serif;
+	FONT-SIZE: 10pt
+}

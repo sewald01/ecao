@@ -1,0 +1,25 @@
+.parent:link, .parent:visited{
+color:#FFFFFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:15px;
+text-decoration:none;
+}
+.parent:hover{
+color:#000000;
+}
+
+.child:link, .child:visited{
+color:#FFFFFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+text-decoration:none;
+}
+
+.child:hover{
+color:#000000;
+}
+
+li{
+list-style-image: url(/includes/menu/menu_small_nohover.gif);
+
+}
