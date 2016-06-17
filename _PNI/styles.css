@@ -71,3 +71,7 @@ P.copyright {font-size: 75%}
 .addMat {
 	padding: 0px 15px 15px;
 }
+
+.addMatHead {
+	padding-left: 15px;
+}
