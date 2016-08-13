@@ -1,7 +1,7 @@
 #!/usr/local/bin/php
 <?php
 
-  require("/home/content/p/s/y/psychewa/html/includes/bv-library.php");
+  require("/home/content/48/7686848/html/includes/bv-library.php");
 
   printHeader("Welcome to Brainvoyage.com");
 ?>
@@ -58,7 +58,7 @@ Once in many decades, a book comes out that is so important that it literally im
 <h1 style="font-size: 2em;">Upcoming and Recent Media Engagements: </h1>
 <!--PUT YOUR EVENT INFORMATION HERE-->
 <?php
-  include("/home/content/p/s/y/psychewa/html/Events/content/Main_Page_Events.txt");
+  include("/home/content/48/7686848/html/Events/content/Main_Page_Events.txt");
 ?>
 <!--END YOUR EVENT INFORMATION-->
 <div style="clear: both; text-align: center;"><br /><hr noshade="" width="80%"><br /></div>
