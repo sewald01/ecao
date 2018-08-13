@@ -1,0 +1,8 @@
+AuthUserFile /home/content/48/7686848/html/_PNI/neppe/.htpasswd
+AuthName CV
+AuthType Basic
+<FilesMatch "^(cv|CVNeppe|NeppeCV|\.access_password).*$">
+	<Limit GET POST PUT>
+	require user CV
+	</Limit>
+</FilesMatch>

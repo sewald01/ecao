@@ -1,0 +1,894 @@
+<html>
+<head>
+<title>FormMail Sample Page</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000&quot;">
+<font FACE="Arial">
+For more informaion about the FormMail script, read the FAQ <a href="#FAQ">below</a>.
+<form ACTION="/cgi-bin/formmail.pl" METHOD="POST">
+<!-- This is the field representing where the form information will get sent. -->
+
+<table BORDER="0">
+<input type="hidden" name="recipient" value="vortex@pni.org"><p> 
+Please enter your name below.
+</b></font>
+</td>
+</tr>
+<tr>
+<td>
+<font FACE="Arial">
+Your from Name: <input TYPE="text" NAME="realname" VALUE SIZE="30" tabindex="1">
+</font>
+</td>
+</tr>
+<tr>
+<td BGCOLOR="#CCCC99">
+<font FACE="Arial"><b>
+Please enter your email address (where it is coming from)
+</b></font>
+</td>
+</tr>
+<tr>
+<td>
+<font FACE="Arial">
+Your from e-mail address:
+<input TYPE="text" NAME="email" VALUE SIZE="30" tabindex="1">
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<font FACE="Arial">
+Your subject:
+<input TYPE="text" NAME="subject" VALUE SIZE="30" tabindex="1">
+</font>
+</td>
+</tr>
+<tr>
+<td BGCOLOR="#CCCC99">
+<font FACE="Arial"><b>
+Please enter any comments below.
+</b></font>
+</td>
+</tr>
+<tr>
+<td>
+<font FACE="Arial">
+Comments:<br>
+<textarea NAME="comments" ROWS="5" COLS="30" WRAP="virtual" tabindex="3"></textarea>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<font FACE="Arial">
+<input TYPE="submit" NAME="Engage" VALUE="Submit" tabindex="4">&nbsp;
+<input TYPE="reset" VALUE="Reset" name="B2" tabindex="5">
+</font>
+</td>
+</tr>
+</table>
+</form>
+
+<ul>
+
+<li>This is a sample web page to test the settings for your FormMail script.
+
+<li>The script uses /usr/lib/sendmail, a free e-mail program installed on our servers.
+
+<li>The form below WILL work if you correctly answered the questions on your administration page.
+
+<li>The script is a modification of FORMMAIL by Mathew Wright, a free program.
+
+<li>If you want additional features, or have trouble with options you may want to go to
+his free script site <a href="http://www.worldwidemart.com/scripts/">here.</a>
+
+<li>We DO NOT PROVIDE FREE SUPPORT explaining how to install scripts, you may want to consult
+a book on Perl, CGI, or ISAPI applications.
+
+<li>This working sample is meant to help you create working forms.
+
+<li>VERSION 1.6 of FormMail has been installed into your cgi-bin directory.
+
+<li></a><font FACE="Arial"> The complete readme with all the options allowed is listed
+below and can also be found of <a href="http://www.worldwidemart.com/scripts/">Matt's
+site.</a></font>
+
+</ul>
+
+<p align="center"><font SIZE="-2" FACE="Arial" COLOR="#FF0000">Formmail is setup and ready
+to use.&nbsp; Many additional features are built-in, read the samples below.
+&nbsp; HOWEVER, once you have modified the script for these additional features Interland
+will not support it.&nbsp; IF you correctly use the options they will work.</font> </p>
+
+<p align="center">If you view the source of this HTML file you will see the recipient tag,
+is a hidden tag, it is set to the e-mail address you entered in the administration page.
+&nbsp; If you delete this then the formmail program will not know where to send the e-mail.</p>
+
+<br>
+
+<a name="FAQ">
+
+<hr>
+
+<br>
+
+<p align="center"><big><big><strong>THE FORMMAIL FAQ<br>
+</strong></big></big><br>
+<em>Can I have multiple recipients?</em><br>
+<br>
+Short Answer:<br>
+<br>
+Yes.<br>
+<br>
+Long Answer:<br>
+<br>
+Yes, all you have to do is put multiple e-mail addresses in the recipient field of your
+form,<br>
+separated by commas. <br>
+<br>
+&lt;input type=hidden name=&quot;recipient&quot;<br>
+value=&quot;email1@address1.com,email2@address2.net&quot;&gt;</p>
+
+<p align="center">&nbsp;</p>
+<div align="center"><center>
+
+<table width="600">
+  <tr>
+    <td><p align="center">[ <a href="/scripts/">Matt's Script Archive</a> ] [ <a
+    href="/scripts/readme/">Readme's</a> ] [ <a href="/scripts/formmail.shtml">FormMail</a> ]</p>
+    <ul>
+      <li><a href="#copyright">Copyright and Header</a> </li>
+      <li><a href="#overview">Overview</a> </li>
+      <li><a href="#setting_up">Setting Up the FormMail Script</a> <ul>
+          <li><a href="#necessary_vars">Necessary Variables</a> <ul>
+              <font size="-1">
+              <li><a href="#mailprog">$mailprog</a> </li>
+              <li><a href="#referers">@referers</a> </font></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#form_config">Form Configuration</a> <ul>
+          <li><a href="#necessary_form_fields">Necessary Form Fields</a> <ul>
+              <font size="-1">
+              <li><a href="#recipient">recipient</a> </font></li>
+            </ul>
+          </li>
+          <li><a href="#optional_form_fields">Optional Form Fields</a> <ul>
+              <font size="-1">
+              <li><a href="#subject">subject</a> </li>
+              <li><a href="#email">email</a> </li>
+              <li><a href="#realname">realname</a> </li>
+              <li><a href="#redirect">redirect</a> </li>
+              <li><a href="#required">required</a> </li>
+              <li><a href="#env_report">env_report</a> </li>
+              <li><a href="#sort">sort</a> </li>
+              <li><a href="#print_config">print_config</a> </li>
+              <li><a href="#print_blank_fields">print_blank_fields</a> </li>
+              <li><a href="#title">title</a> </li>
+              <li><a href="#return_link_url">return_link_url</a> </li>
+              <li><a href="#return_link_title">return_link_title</a> </li>
+              <li><a href="#missing_fields_redirect">missing_fields_redirect</a> </li>
+              <li><a href="#background">background</a> </li>
+              <li><a href="#bgcolor">bgcolor</a> </li>
+              <li><a href="#text_color">text_color</a> </li>
+              <li><a href="#link_color">link_color</a> </li>
+              <li><a href="#vlink_color">vlink_color</a> </li>
+              <li><a href="#alink_color">alink_color</a> </font></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#uses">Some of the possible uses of this script</a> </li>
+      <li><a href="#history">History</a> </li>
+    </ul>
+    <hr size="1">
+    </td>
+  </tr>
+</table>
+</center></div><div align="center"><center>
+
+<table border="0" width="600">
+  <tr>
+    <td><a name="copyright"><h2><u>Copyright and Header</u></a> </h2>
+    <blockquote>
+      <font size="-1"><pre>
+##############################################################################
+# FormMail                        Version 1.6                                #
+# Copyright 1996-1997 Matt Wright mattw@worldwidemart.com                    #
+# Created 06/09/95                Last Modified 05/02/97                     #
+# Matt's Script Archive, Inc.:    http://www.worldwidemart.com/scripts/      #
+##############################################################################
+# If you run into any problems while trying to configure this scripts, help  #
+# is available.  The steps you should take to get the fastest results, are:  #
+#       1) Read this file thoroughly.                                        #
+#       2) Consult the Matt's Script Archive Frequently Asked Questions:     #
+#               http://www.worldwidemart.com/scripts/faq/                    #
+#       3) If you are still having difficulty installing this script, send   #
+#          e-mail to: scripts-help@tahoenet.com                              #
+#          Include any error messages you are receiving and as much detail   #
+#          as you can so we can spot your problem.  Also include the variable#
+#          configuration block that is located at the top of the script.     #
+#                                                                            #
+# Hopefully we will be able to help you solve your problems.  Thank you.     #
+##############################################################################
+# COPYRIGHT NOTICE                                                           #
+# Copyright 1995 - 1997 Matthew M. Wright  All Rights Reserved.              #
+#                                                                            #
+# FormMail may be used and modified free of charge by anyone so long as this #
+# copyright notice and the comments above remain intact.  By using this      #
+# code you agree to indemnify Matthew M. Wright from any liability that      #
+# might arise from its use.                                                  #
+#                                                                            #
+# Selling the code for this program without prior written consent is         #
+# expressly forbidden.  In other words, please ask first before you try and  #
+# make money off of my program.                                              #
+#                                                                            #
+# Obtain permission before redistributing this software over the Internet or #
+# in any other medium.	In all cases copyright and header must remain intact #
+##############################################################################
+</pre>
+      </font>
+    </blockquote>
+    <hr size="1">
+    <a name="overview"><h2><u>Overview</u></a> </h2>
+    <blockquote>
+      <p>FormMail is a universal WWW form to E-mail gateway. There is only one required form
+      input tag which must be specified in order for this script to work with your existing
+      forms. Other hidden configuration fields can also be used to enhance the operation of
+      FormMail on your site. Version 1.6 of FormMail contains a few minor bug fixes, optimized
+      code and more comments. The biggest change in this version is that by default, form fields
+      are now sorted as they appear in the form. Error pages were also beautified a little and
+      two new configuration fields were created. Read the History for a more complete list of
+      changes.</p>
+      <p>The script, FormMail.pl, needs to be placed in your server's cgi-bin and the anonymous
+      WWW user must have the ability to read/execute the script. If you do not have access to
+      your server's cgi-bin, yet you can execute cgi scripts, you may want to try adding a .cgi
+      extension to the FormMail.pl, so you could move it to FormMail.cgi.</p>
+    </blockquote>
+    <hr size="1">
+    <a name="setting_up"><h2><u>Setting Up the FormMail Script</u></a> </h2>
+    <ul>
+      <p>The FormMail.pl script does not have to be extensively configured in order to work.
+      There are only two variables in the perl file which you will need to define along with
+      changing the top line of your script to match the location of you Perl interpreter.</p>
+      <a name="necessary_vars"><h3><u>Necessary Variables</u></h3>
+      </a><blockquote>
+        <dl>
+          <dt><a name="mailprog"><b><tt>$mailprog = '/usr/lib/sendmail';</tt></b></a> </dt>
+          <dd>This variable must define the location to your server's sendmail program. If this is
+            incorrect, form results will not be mailed to you.</dd>
+          <dt><a name="referers"><b><tt>@referers = ('worldwidemart.com','206.31.72.203');</tt></b></a>
+          </dt>
+          <dd>This array allows you to define the domains that you will allow forms to reside on and
+            use your FormMail script. If a user tries to put a form on another server, that is not
+            worldwidemart.com, they will receive an error message when someone tries to fill out their
+            form. By placing worldwidemart.com in the @referers array, this also allows
+            www.worldwidemart.com, ftp.worldwidemart.com, any other http address with
+            worldwidemart.com in it and worldwidemart.com's IP address to access this script as well,
+            so no users will be turned away. </dd>
+        </dl>
+        <p><br>
+        Your formmail program is now configured.</p>
+      </blockquote>
+    </ul>
+    <hr size="1">
+    <a name="form_config"><h2><u>Form Configuration</u></a> </h2>
+    <ul>
+      <p>The action of your form needs to point towards this script (obviously), and the method
+      must be POST or GET in capital letters. Version 1.5 of FormMail offers many new ways to
+      code your form to tailor the resulting HTML page and the way the script performs. Below is
+      a list of form fields you can use and how to implement them.</p>
+      <a name="necessary_form_fields"><h3><u>Necessary Form Fields</u></h3>
+      </a><blockquote>
+        <p>There is only one form field that you must have in your form, for FormMail to work
+        correctly. This is the recipient field.</p>
+        <table border="0">
+          <tr>
+            <th align="right"><a name="recipient">Field:</a> </th>
+            <td><tt>recipient</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This form field allows you to specify to whom you wish for your form results to be
+            mailed. Most likely you will want to configure this option as a hidden form field with a
+            value equal to that of your e-mail address.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Syntax: </th>
+            <td><tt>&lt;input type=hidden name=&quot;recipient&quot;
+            value=&quot;email@your.host.com&quot;&gt;</tt></td>
+          </tr>
+        </table>
+      </blockquote>
+      <hr size="1">
+      <a name="optional_form_fields"><h3><u>Optional Form Fields</u></h3>
+      </a><blockquote>
+        <table border="0">
+          <tr>
+            <th align="right"><a name="subject">Field:</a> </th>
+            <td><tt>subject</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>The subject field will allow you to specify the subject that you wish to appear in the
+            e-mail that is sent to you after this form has been filled out. If you do not have this
+            option turned on, then the script will default to a message subject: WWW Form Submission<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>If you wish to choose what the subject is:<br>
+            <tt>&lt;input type=hidden name=&quot;subject&quot; value=&quot;Your Subject&quot;&gt;</tt><p>To
+            allow the user to choose a subject:<br>
+            <tt>&lt;input type=text name=&quot;subject&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="email">Field:</a> </th>
+            <td><tt>email</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This form field will allow the user to specify their return e-mail address. If you
+            want to be able to return e-mail to your user, I strongly suggest that you include this
+            form field and allow them to fill it in. This will be put into the From: field of the
+            message you receive. If you want to require an email address with valid syntax, add this
+            field name to the 'required' field.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Syntax: </th>
+            <td><tt>&lt;input type=text name=&quot;email&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="realname">Field:</a> </th>
+            <td><tt>realname</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>The realname form field will allow the user to input their real name. This field is
+            useful for identification purposes and will also be put into the From: line of your
+            message header.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Syntax: </th>
+            <td><tt>&lt;input type=text name=&quot;realname&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="redirect">Field:</a> </th>
+            <td><tt>redirect</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>If you wish to redirect the user to a different URL, rather than having them see the
+            default response to the fill-out form, you can use this hidden variable to send them to a
+            pre-made HTML page.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>To choose the URL they will end up at:<br>
+            <tt>&lt;input type=hidden name=&quot;redirect&quot;
+            value=&quot;http://your.host.com/to/file.html&quot;&gt;</tt><p>To allow them to specify a
+            URL they wish to travel to once the form is filled out:<br>
+            <tt>&lt;input type=text name=&quot;redirect&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="required">Field:</a> </th>
+            <td><tt>required</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>You can now require for certain fields in your form to be filled in before the user
+            can successfully submit the form. Simply place all field names that you want to be
+            mandatory into this field. If the required fields are not filled in, the user will be
+            notified of what they need to fill in, and a link back to the form they just submitted
+            will be provided.<p>To use a customized error page, see 'missing_fields_redirect'<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>If you want to require that they fill in the email and phone fields in your form, so
+            that you can reach them once you have received the mail, use a syntax like:<p><tt>&lt;input
+            type=hidden name=&quot;required&quot; value=&quot;email,phone&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="env_report">Field:</a> </th>
+            <td><tt>env_report</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>Allows you to have Environment variables included in the e-mail message you receive
+            after a user has filled out your form. Useful if you wish to know what browser they were
+            using, what domain they were coming from or any other attributes associated with
+            environment variables. The following is a short list of valid environment variables that
+            might be useful:<pre>
+
+REMOTE_HOST     - Sends the hostname making the 
+                  request.
+REMOTE_ADDR     - Sends the IP address of the
+                  remote host making the request.
+REMOTE_USER     - If server supports authentication
+                  and script is protected, this is
+                  the username they have
+                  authenticated as. *This is not
+                  usually set.*
+HTTP_USER_AGENT - The browser the client is using
+                  to send the request.</pre>
+            <p>There are others, but these are a few of the most useful. For more information on
+            environment variables, see:</p>
+            <p><a href="http://www.cgi-resources.com/Documentation/Environment_Variables/">The CGI
+            Resource Index: Documentation: Environment Variables</a><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>If you wanted to find the remote host and browser sending the request, you would put
+            the following into your form:<p><tt>&lt;input type=hidden name=&quot;env_report&quot;
+            value=&quot;REMOTE_HOST,HTTP_USER_AGENT&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="sort">Field:</a> </th>
+            <td><tt>sort</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.4 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This field allows you to choose the order in which you wish for your variables to
+            appear in the e-mail that FormMail generates. You can choose to have the field sorted
+            alphabetically or specify a set order in which you want the fields to appear in your mail
+            message. By leaving this field out, the order will simply default to the order in which
+            the browsers sends the information to the script (which is usually the exact same order as
+            they appeared in the form.) When sorting by a set order of fields, you should include the
+            phrase &quot;order:&quot; as the first part of your value for the sort field, and then
+            follow that with the field names you want to be listed in the e-mail message, separated by
+            commas. Version 1.6 allows a little more flexibility in the listing of ordered fields, in
+            that you can include spaces and line breaks in the field without it messing up the sort.
+            This is helpful when you have many form fields and need to insert a line wrap.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>To sort alphabetically:<p><tt>&lt;input type=hidden name=&quot;sort&quot;
+            value=&quot;alphabetic&quot;&gt;</tt></p>
+            <p>To sort by a set field order:</p>
+            <p><tt>&lt;input type=hidden name=&quot;sort&quot;
+            value=&quot;order:name1,name2,etc...&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="print_config">Field:</a> </th>
+            <td><tt>print_config</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.5 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>print_config allows you to specify which of the config variables you would like to
+            have printed in your e-mail message. By default, no config fields are printed to your
+            e-mail. This is because the important form fields, like email, subject, etc. are included
+            in the header of the message. However some users have asked for this option so they can
+            have these fields printed in the body of the message. The config fields that you wish to
+            have printed should be in the value attribute of your input tag separated by commas.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>If you want to print the email and subject fields in the body of your message, you
+            would place the following form tag:<p><tt>&lt;input type=hidden
+            name=&quot;print_config&quot; value=&quot;email,subject&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="print_blank_fields">Field:</a> </th>
+            <td><tt>print_blank_fields</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.6</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>print_blank_fields allows you to request that all form fields are printed in the
+            return HTML, regardless of whether or not they were filled in. FormMail defaults to
+            turning this off, so that unused form fields aren't e-mailed.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>If you want to print all blank fields:<br>
+            <tt>&lt;input type=hidden name=&quot;print_blank_fields&quot; value=&quot;1&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="title">Field:</a> </th>
+            <td><tt>title</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This form field allows you to specify the title and header that will appear on the
+            resulting page if you do not specify a redirect URL.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>If you wanted a title of 'Feedback Form Results':<p><tt>&lt;input type=hidden
+            name=&quot;title&quot; value=&quot;Feedback Form Results&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="return_link_url">Field:</a> </th>
+            <td><tt>return_link_url</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This field allows you to specify a URL that will appear, as return_link_title, on the
+            following report page. This field will not be used if you have the redirect field set, but
+            it is useful if you allow the user to receive the report on the following page, but want
+            to offer them a way to get back to your main page.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td><tt>&lt;input type=hidden name=&quot;return_link_url&quot;
+            value=&quot;http://your.host.com/main.html&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="return_link_title">Field:</a> </th>
+            <td><tt>return_link_title</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This is the title that will be used to link the user back to the page you specify with
+            return_link_url. The two fields will be shown on the resulting form page as: <ul>
+              <li><a href="return_link_url">return_link_title</a> </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td><tt>&lt;input type=hidden name=&quot;return_link_title&quot; value=&quot;Back to Main
+            Page&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="missing_fields_redirect">Field:</a> </th>
+            <td><tt>missing_fields_redirect</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.6</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This form field allows you to specify a URL that users will be redirected to if there
+            are fields listed in the required form field that are not filled in. This is so you can
+            customize an error page instead of displaying the default.</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td><tt>&lt;input type=hidden name=&quot;missing_fields_redirect&quot;
+            value=&quot;http://your.host.com/error.html&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="background">Field:</a> </th>
+            <td><tt>background</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This form field allow you to specify a background image that will appear if you do not
+            have the redirect field set. This image will appear as the background to the form results
+            page.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td><tt>&lt;input type=hidden name=&quot;background&quot;
+            value=&quot;http://your.host.xxx/image.gif&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="bgcolor">Field:</a> </th>
+            <td><tt>bgcolor</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This form field allow you to specify a bgcolor for the form results page in much the
+            way you specify a background image. This field should not be set if the redirect field is.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>For a background color of White:<p><tt>&lt;input type=hidden name=&quot;bgcolor&quot;
+            value=&quot;#FFFFFF&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="text_color">Field:</a> </th>
+            <td><tt>text_color</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>This field works in the same way as bgcolor, except that it will change the color of
+            your text.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>For a text color of Black:<p><tt>&lt;input type=hidden name=&quot;text_color&quot;
+            value=&quot;#000000&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="link_color">Field:</a> </th>
+            <td><tt>link_color</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>Changes the color of links on the resulting page. Works in the same way as text_color.
+            Should not be defined if redirect is.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>For a link color of Red:<p><tt>&lt;input type=hidden name=&quot;link_color&quot;
+            value=&quot;#FF0000&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="vlink_color">Field:</a> </th>
+            <td><tt>vlink_color</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.3 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>Changes the color of visited links on the resulting page. Works exactly the same as
+            link_color. Should not be set if redirect is.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>For a visited link color of Blue:<p><tt>&lt;input type=hidden
+            name=&quot;vlink_color&quot; value=&quot;#0000FF&quot;&gt;</tt></td>
+          </tr>
+        </table>
+        <hr size="1">
+        <table border="0">
+          <tr>
+            <th align="right"><a name="alink_color">Field:</a> </th>
+            <td><tt>alink_color</tt><br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right">Version:</th>
+            <td>1.4 &amp; Up</td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Description: </th>
+            <td>Changes the color of active links on the resulting page. Works exactly the same as
+            link_color. Should not be set if redirect is.<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top">Syntax: </th>
+            <td>For a active link color of Blue:<p><tt>&lt;input type=hidden
+            name=&quot;alink_color&quot; value=&quot;#0000FF&quot;&gt;</tt></td>
+          </tr>
+        </table>
+      </blockquote>
+      <p>Any other form fields that appear in your script will be mailed back to you and
+      displayed on the resulting page if you do not have the redirect field set. There is no
+      limit as to how many other form fields you can use with this form, except the limits
+      imposed by browsers and your server.</p>
+    </ul>
+    <hr size="1">
+    <a name="uses"><h2><u>Some of the possible uses of this script</u></a> </h2>
+    <ol>
+      <li>You want to have a form that will be mailed to you, but aren't sure how to write the CGI
+        script for it. </li>
+      <li>You are the webmaster of your site and want to allow users to use forms, but not to have
+        their own cgi-bin directories, which can cause security risks to your system. You can set
+        this script up and then allow all users to run off of it. </li>
+      <li>Want to have one script to parse all of your html forms and mail them to you. </li>
+    </ol>
+    <hr size="1">
+    <a name="history"><h2><u>History</u></a> </h2>
+    <blockquote>
+      <pre>
+Version 1.0 06/11/95 -  This script was created.
+Version 1.1 08/03/95 -  A major hole in the script which allowed 
+                        users to run commands under your server's
+                        uid was disabled, thanks to Paul Phillips
+                        who noticed the error.
+                     -  The ability to redirect the user to a 
+                        specified HTML file after they filled
+                        out a form was added.
+Version 1.2 09/23/95 -  If the form field is one of the required
+                        or optional 'special' fields, such as 
+                        redirect, recipient, subject, email, 
+                        realname, etc... the script will not 
+                        print these fields to either your mail 
+                        message or to the user's screen when they
+                        are returned to a generic form response.
+                        It helps you so that things do not get
+                        duplicated.
+Version 1.3 01/21/96 -  Much needed update finally completed
+                     -  Added form fields: env_report, bgcolor, 
+                        background, link_color, vlink_color,
+                        title, text_color, return_link_title, 
+                        return_link_title, and required.
+                     -  Security hole, which allowed any user on 
+                        any system to bum off of your formmail
+                        script, has been plugged up with the
+                        @referers variable.
+                     -  Report style in return html and e-mail 
+                        touched up a bit.
+Version 1.4 01/23/96 -  Added options: sort, alink_color
+                     -  Fixed a few bugs from Version 1.3, namely
+                        the fact that the link_colors weren't
+                        working well.
+                     -  FormMail now supports both the GET and
+                        POST methods.
+Version 1.5 02/05/96 -  Sorting of Fields in E-Mail Response
+                        Fixed.
+                     -  print_config option added.
+Version 1.6 05/02/97 -  Sorting of fields by default was fixed to
+                        now sort in the order the fields are
+                        passed to FormMail from the web browser,
+                        which is usually the same order as they
+                        appear in the HTML form.
+                     -  The sort order: directive, env_report and 
+                        print_config parsing routines were made
+                        to better compensate for line breaks and
+                        extra spaces in input for ease of use.
+                     -  Redirect error causing the redirect
+                        option to incorrectly work with https
+                        (secure servers) was fixed.
+                     -  Output of non-filled in form fields
+                        suppressed.
+                     -  E-mail addresses checked for correct
+                        syntax if designated a required field.
+                     -  Fields only printed if they contain a
+                        value or if the print_blank_fields option
+                        is set to 1.
+                     -  missing_fields_redirect added so you can
+                        route users who don't completely fill out
+                        the form to a pre-made HTML page.
+                     -  Parts of code optimized, especially in
+                        respect to the way config variables are
+                        handled.
+</pre>
+    </blockquote>
+    <hr size="1">
+    <p align="center"><font size="-1">[ <a href="/scripts/">Matt's Script Archive</a> ] [ <a
+    href="/scripts/implement.shtml">Comment Form</a> ] [ <a href="http://www.cgi-perl.com/">CGI/Perl
+    Cookbook</a> ] [ <a href="/scripts/ads/">Advertising</a> ]</p>
+    <div align="center"><center><table width="600" border="0" cellpadding="0">
+      <tr>
+        <td width="170"><p align="center"><a href="/scripts/ads/redirect/small?isp_s4"><img
+        src="ispB.gif" width="156" height="28" border="0"
+        alt="STOP wasting TIME!!! Go to the source. ISPcheck - webhosting search engine"><br>
+        <font face="Verdana,Arial,Helvetica" size="-1">find &amp; compare webhosts</font></a></td>
+        <td align="center" width="260"><p align="center"><font face="Arial,Helvetica" size="-1"><a
+        href="http://www.worldwidemart.com/mattw/">Matt Wright</a> - <i><a
+        href="mailto:mattw@worldwidemart.com">mattw@worldwidemart.com</a></i><br>
+        © 1995 - 1998 Matt's Script Archive, Inc.</font></td>
+        <td width="170"><p align="center"><a href="/scripts/ads/redirect/small?cpc_s1"><img
+        src="cpc156x28B.gif" width="156" height="28" border="0" alt="CGI/Perl Cookbook"><br>
+        <font face="Verdana,Arial,Helvetica" size="-1">CGI book by Matt Wright</font></a></td>
+      </tr>
+    </table>
+    </center></div></font></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

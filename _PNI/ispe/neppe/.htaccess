@@ -1,0 +1,7 @@
+AuthUserFile /home/content/48/7686848/html/_PNI/ispe/neppe/.htpasswd
+AuthName ISPE
+AuthType Basic
+
+<Limit GET POST PUT>
+require user ISPE
+</Limit>

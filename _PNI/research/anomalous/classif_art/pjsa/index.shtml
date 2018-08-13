@@ -1,0 +1,58 @@
+<HTML>
+
+<HEAD>
+<TITLE>
+  Pacific Neuropsychiatric Institute: 
+  PJSA Articles
+</TITLE>
+
+<LINK REL="stylesheet" HREF="http://www.pni.org/.styles/main.css" TYPE="text/css"> 
+<LINK REL="stylesheet" HREF="http://www.pni.org/.styles/new_main.css" TYPE="text/css">
+</HEAD>
+
+<BODY BGCOLOR="white">
+
+<ILAYER SRC="/.clip/top.html"></ILAYER>
+
+<IMG SRC="/.pictures/pni_banner_small.jpg">
+
+<H1>PJSA Articles</H1>
+
+<P>The following articles have been reprinted from the PJSA. They are old
+and although checked for accuracy (using spelling in British English!) it
+is possible that reference numbers or other typographical errors have
+arisen. Nevertheless, as these papers reflect the pioneering work in the
+area of subjective anomalous experience in relation to clinical
+psychiatric frameworks, they may be of enormous importance to
+phenomenologists and researchers and they are reprinted here for academics
+who were unable to obtain the original issues. </P>
+
+<UL>
+  <LI><A HREF="psychiatric_interpretations.htm">
+    Psychiatric Interpretations of Subjective Paranormal Perception</A>
+    Vernon M. Neppe</A>
+  <LI><A HREF="multiaxial.html">
+    Multiaxial Classificatory System for Anomalous Experience</A>
+    Vernon M Neppe</LI>
+  <LI><A HREF="culture.html">
+    Culture, Psychopathology and PSI: A Clinical Relationship</A>
+    Vernon M. Neppe and Michael Ewart Smith</LI>
+  <LI><A HREF="obe.html">
+    Out of Body Experience: A Phenomenological Categorization</A> Vernon M. Neppe</LI>
+</UL>
+<!--ARTICLE LINKS MENU-->
+<p>
+<SCRIPT LANGUAGE="JavaScript" SRC="http://www.pni.org/links.js"></SCRIPT>
+</p>
+<!--END ARTICLE LINKS MENU-->
+<ILAYER SRC="/.clip/bottom.html"></ILAYER>
+
+<A NAME="copyright"></A> 
+<P> <FONT SIZE="-2"> </FONT><font size="1">Copyright ©1997- 2002 Pacific Neuropsychiatric 
+  Institute</font> 
+  <!--#exec cgi="/cgi-bin/web5517d/counter.cgi" -->
+</P>
+
+</BODY>
+
+</HTML>

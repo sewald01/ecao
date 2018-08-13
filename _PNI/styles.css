@@ -1,5 +1,9 @@
 BODY {background-color: rgb(255,204,102)}
 
+.search-div {
+	width: 276px;
+}
+
 p {
 	color: #333333;
 	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;

@@ -2,11 +2,11 @@
 
 # Ray Eads (coylh@eskimo.com) 1997
 
-require '/home/content/p/s/y/psychewa/html/_PNI/lib/cgi-lib.pl';
+require '/home/content/48/7686848/html/_PNI/lib/cgi-lib.pl';
 
 $REFERRER = "http://www.pni.org/cv/";
 
-$WEB_DIR = "/home/content/p/s/y/psychewa/html/_PNI/";
+$WEB_DIR = "/home/content/48/7686848/html/_PNI/";
 
 #$SENDMAIL = "/usr/sbin/sendmail -f access\@pni.org";
 
