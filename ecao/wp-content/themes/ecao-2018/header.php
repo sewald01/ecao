@@ -32,17 +32,17 @@
 	<nav class="navbar navbar-fixed-top">
 		<div class="container">
 
-			<div class="col-md-10 col-sm-11 col-xs-11" id="header-logo-div">
-				<div class="navbar-header"><a href="<?php echo get_option('home'); ?>/"><h3 style="padding-bottom:0px">the Exceptional Creative Achievement Organization</h3></a></div>
+			<div class="col-lg-7 col-md-10 col-sm-11 col-xs-11" id="header-logo-div">
+				<div class="navbar-header"><a href="<?php echo get_option('home'); ?>/"><h3 style="padding-bottom:0px"><span id="rubic">the </span>Exceptional Creative Achievement Organization</h3></a></div>
 			</div>
 			<!--<span class="float-right" id="login-field">
 				<a href="login.php">sign up</a>
 				<a href="login.php">log in</a>
 			</span>-->
-			<div class="col-md-2 col-sm-1 col-xs-1">
+			<div class="col-lg-5 col-md-2 col-sm-1 col-xs-1">
 				<div class="float-right" id="header-fields">
 					<div class="float-right" id="header-field">
-						<ul id="menu-toggle"><a href="#" style="color:GhostWhite"><h4 style="padding-top:0px;padding-bottom:0px;"><span id="header-menu"><img src="<?php bloginfo('template_directory'); ?>/images/ecao-icon.png" style="width:24px;height:auto;margin-top:-4px;">  MENU</span> <img src="<?php bloginfo('template_directory'); ?>/images/img-toggle.png" style="width:20px;height:auto"></h4></a></ul>
+						<ul><h4 style="padding-top:0px;padding-bottom:0px;color:GhostWhite"><span id="header-menu" class="desktop-menu"><a href="<?php echo get_option('home'); ?>/about-us" style="color:GhostWhite;font-weight:600;">ABOUT</a><a href="<?php echo get_option('home'); ?>/membership-requirements/apply-for-consultancy/" style="color:GhostWhite;font-weight:600">MEMBERSHIP</a><a href="<?php echo get_option('home'); ?>/donate/" style="color:GhostWhite;font-weight:600">SPONSORSHIP</a></span><a href="#" style="color:GhostWhite" id="menu-toggle"><span id="header-menu"><img src="<?php bloginfo('template_directory'); ?>/images/ecao-icon.png" style="width:24px;height:auto;margin-top:-4px;" id="rubic"> </span><img src="<?php bloginfo('template_directory'); ?>/images/img-toggle.png" style="width:20px;height:auto"></a></h4></ul>
 						
 					</div>
 				</div>

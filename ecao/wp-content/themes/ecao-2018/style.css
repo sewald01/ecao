@@ -136,6 +136,10 @@ header {
 	text-decoration: none;
 }
 
+#header-menu a {
+	padding-right:15px;
+}
+
 #menu-main {
 	position:absolute;
 	top: 51px;
@@ -208,14 +212,15 @@ nav .container {
 	padding-top: 50px;
 	min-height: 100%;
 	margin-bottom: -125px;
-	padding-bottom: 125px;
-
+	padding-bottom: 135px;
+	max-width:1170px;
+	margin:auto;
 }
 
 .content-wrapper-b {
 	padding-top: 50px;
 	min-height:100%;
-	padding-bottom: 142px;
+	padding-bottom: 10px;
 	max-width:1170px;
 	margin:auto;
 	
@@ -424,7 +429,10 @@ textarea {
 
 #menu-footer-menu li.menu-item-has-children {
 	padding-left: 100px;
+	
 }
+
+
 
 footer {
 	clear: both;
@@ -551,6 +559,18 @@ footer ul li a {
 	#menu-toggle {
 		margin-top:20px;
 		
+	}
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+	.desktop-menu {
+		display:none;
+	}
+}
+
+@media (min-width:1200px) and (max-width:1265px) {
+	#rubic {
+		display:none;
 	}
 }
 

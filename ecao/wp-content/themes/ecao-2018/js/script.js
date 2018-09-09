@@ -6,7 +6,7 @@ window.onload = function() {
 	
 	
 		
-	jQuery("#menu-toggle > a").click(function() { 
+	jQuery("#menu-toggle").click(function() { 
 	
 		var menuMain = $("#menu-main");
 			
