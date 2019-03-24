@@ -60,8 +60,8 @@
 	<div class="row">
 		
 		<div class="col-md-8 col-sm-5">
-			<h4 style="padding-top:50px;padding-left:30px;">Why another high IQ society?</h4>
-			<p style="padding-left:30px;padding-right:60px;">The ECAO  provides a professional think tank of exceedingly creative, exceptionally intelligent individuals who have demonstrable achievement records and high ethical standards. Members of this group can be used professionally individually or together within their specialties to contribute to innovation and creative development in our society.
+			<h4 style="padding-top:50px;padding-left:60px;">Why another high IQ society?</h4>
+			<p style="padding-left:60px;padding-right:60px;">The ECAO  provides a professional think tank of exceedingly creative, exceptionally intelligent individuals who have demonstrable achievement records and high ethical standards. Members of this group can be used professionally individually or together within their specialties to contribute to innovation and creative development in our society.
 		</div>
 
 		<div class="col-md-4 col-sm-5 " style="text-align:center">
@@ -72,8 +72,8 @@
 	<div class="row">
 		
 		<div class="col-md-8 col-sm-5">
-			<h4 style="padding-top:50px;padding-left:30px;">How does ECAO differ from other high IQ societies?</h4>
-			<p style="padding-left:30px;padding-right:60px;">ECAO is different from other exceptional intelligence societies. It is different from almost all other high IQ societies because the requirements are beyond pure intelligence based on some kind of structured / standardized testing,  but incorporate exceptional creative achievements. The major difference, however, is the ultimate main aim, consultancy as a way to contribute to our broader world.
+			<h4 style="padding-top:50px;padding-left:60px;">How does ECAO differ from other high IQ societies?</h4>
+			<p style="padding-left:60px;padding-right:60px;">ECAO is different from other exceptional intelligence societies. It is different from almost all other high IQ societies because the requirements are beyond pure intelligence based on some kind of structured / standardized testing,  but incorporate exceptional creative achievements. The major difference, however, is the ultimate main aim, consultancy as a way to contribute to our broader world.
 		</div>
 		
 		<div class="col-md-4 col-sm-5 " style="text-align:center">
